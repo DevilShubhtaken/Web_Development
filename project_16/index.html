@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <style>
+            .cal{
+                width: 300px;
+                height: 500px;
+                background-color: #f2f0f3;
+                padding: 20px;
+                border-radius: 5px;
+            }
+
+            input[type="text"] {
+                width: 85%;
+                padding: 10px;
+                font-size: 20px;
+                text-align: right;
+                border-radius: 5px;
+            }
+
+            .ccn {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+                margin: 5px;
+                border-radius: 5px;
+            }
+            .ccv {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+                margin: 5px;
+                border-radius: 5px;
+            }
+       </style>
+
+       <script>
+            let currentInput = '';
+            let currentOperation = '';
+            let currentResult = '';
+            const Display = document.getElementById('Display');
+
+            function appenedToDisplay(value) {
+                currentInput += value;
+                document.getElementById("Display").value=currentInput;
+            }
+
+            function clearDisplay() {
+                currentInput = '';
+                currentOperation = '';
+                currentResult = '';
+                document.getElementById("Display").value="0";
+            }
+
+            function calculateResult() {
+                if (currentInput =='=') return;
+
+                try{
+                    currentResult = eval(currentInput);
+                    document.getElementById("Display").value=currentResult;
+                    currentInput = currentResult.toString();
+                } catch (error) {
+                    document.getElementById("Display").innerText = 'Error';
+                    currentInput = '';
+                    currentResult = '';
+                }
+            }
+
+       </script>
+    </head>
+    <body>
+       <center>
+        <div class="cal">
+            <h2><center>CALCULATOR</center></h2>
+        <input type="text" id="Display">
+        <button class="ccv" onclick="clearDisplay()">AC</button>
+        <button class="ccn" onclick="appenedToDisplay('1')">1</button>
+        <button class="ccn" onclick="appenedToDisplay('2')">2</button>
+        <button class="ccn" onclick="appenedToDisplay('3')">3</button>
+        <button class="ccn" onclick="calculateResult()">=</button>
+        <button class="ccn" onclick="appenedToDisplay('4')">4</button>
+        <button class="ccn" onclick="appenedToDisplay('5')">5</button>
+        <button class="ccn" onclick="appenedToDisplay('6')">6</button>
+        <button class="ccn" onclick="appenedToDisplay('*')">*</button>
+        <button class="ccn" onclick="appenedToDisplay('7')">7</button>
+        <button class="ccn" onclick="appenedToDisplay('8')">8</button>
+        <button class="ccn" onclick="appenedToDisplay('9')">9</button>
+        <button class="ccn" onclick="appenedToDisplay('/')">/</button>
+        <button class="ccn" onclick="appenedToDisplay('-')">-</button>
+        <button class="ccn" onclick="appenedToDisplay('0')">0</button>
+        <button class="ccn" onclick="appenedToDisplay('+')">+</button>
+       </div>
+       </center>
+    </body>
+</html>

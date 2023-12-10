@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Find Largest Number</title>
+  <script>
+    function findLargestNumber() {
+      var num1 = parseFloat(prompt("Enter first number:"));
+      var num2 = parseFloat(prompt("Enter second number:"));
+      var num3 = parseFloat(prompt("Enter third number:"));
+
+      if (!isNaN(num1) && !isNaN(num2) && !isNaN(num3)) {
+        var largest = num1;
+
+        if (num2 > largest) {
+          largest = num2;
+        }
+
+        if (num3 > largest) {
+          largest = num3;
+        }
+
+        alert("The largest number is: " + largest);
+      } else {
+        alert("Please enter valid numbers!");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Find Largest Number</h1>
+  <button onclick="findLargestNumber()">Find Largest</button>
+</body>
+</html>
