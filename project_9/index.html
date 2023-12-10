@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>
+            sign up form
+        </title>
+    </head>
+    <body><center>
+        <table border="2" width="400">
+            <tr>
+                <td height="2" bgcolor="orange"></td>
+            </tr>
+            <tr>
+               <td bgcolor="darkblue">
+                <form id="signup-form" onsubmit="return validate()">
+                <lable for="first_name"><font color="yellow">First Name&nbsp&nbsp</font></lable>
+                <input type="textbox" id="first_name" name="first_name" placeholder="First Name" required><br><br>
+                <lable for="last_name"><font color="yellow">Last Name&nbsp&nbsp</font></lable>
+                <input type="textbox" id="last_name" name="last_name" placeholder="Last Name" required><br><br>
+                <lable for="dob"><font color="yellow">Date Of Birth&nbsp&nbsp&nbsp&nbsp&nbsp</font></lable>
+                <input type="date" id="dob" name="dob" reqiured><br><br>
+                <lable for="gender"><font color="yellow">Gender&nbsp&nbsp&nbsp</font></lable>
+                <input type="radio" id="gender" name="gender" required><font color="yellow">Male</font>
+                <input type="radio" id="gender" name="gender" required><font color="yellow">Female</font><br><br>
+                <lable for="country"><font color="yellow">Country&nbsp&nbsp</font></lable>
+                <select id="country" name="country" class="form-control" width="200">
+                    <option value="Afghanistan">Afghanistan</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Austria">Austria</option>
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="Bhutan">Bhutan</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="Cambodia">Cambodia</option>
+                    <option value="Canada">Canada</option>
+                    <option value="China">China</option>
+                    <option value="India" selected>India</option>
+                    <option value="Indonesia">Indonesia</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="United States">United States</option>
+                </select><br><br>
+                <label for="email"><font color="yellow">E-mail&nbsp&nbsp</font></label>
+                <input type="email" id="email" name="email" placeholder="Enter E-mail" required><br><br>
+                <label for="phone"><font color="yellow">Phone&nbsp&nbsp</font></label>
+                <input type="textbox" id="phone" name="phone" placeholder="Enter Phone" required><br><br>
+                <label for="password"><font color="yellow">Password&nbsp&nbsp</font></label>
+                <input type="password" id="password" name="password" required><br><br>
+                <label for="confirm"><font color="yellow">Confirm Password&nbsp&nbsp</font></label>
+                <input type="password" id="confirm" name="confirm" required><br><br>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="checkbox" required><font color="yellow"> I Agree to Terms of use</font>x<br><br>
+                </form>
+               </td>
+            </tr>
+            <tr height="5">
+                <td align="right" bgcolor="orange">
+                <input type="submit" value="Submit" bgcolor="green">
+                <input type="submit" value="cancel" bgcolor="red">
+                </td>
+            </tr>
+        </table></center>
+    </body>
+</html>
