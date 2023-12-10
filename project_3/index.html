@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About My City</title>
+        <style>
+            h1{font-size: 72px;color: blue;text-align: center;}
+            .landmark{display: inline-block;margin: 10px;padding: 10px;}
+            #KeshavDevTemple{color: red;font-family: Arial, sans-serif;}
+            #DwarkadhishTemple{color: orange;font-family: Georgia, serif;}
+            #PremMandir{color: yellow;font-family: Comic Sans MS, sans-serif;}
+            #GoverdhanHill{color: green;font-family: Times New Roman, serif;}
+            #VishramGhat{color: blue;font-family: Verdana, sans-serif;}
+            #BirlaMandir{color: purple;font-family: Courier New, monospace;}
+            #GitaMandir{color: pink;font-family: Arial Narrow, sans-serif;}
+            #SatiBurj{color: brown;font-family: Trebuchet MS, sans-serif;}
+            #JamiaMasjid{color: teal;font-family: Lucida Console, monospace;}
+            #MathuraMuseum{color: gray;font-family: Georgia, serif;}
+            #JaiGurudevInstituteOfTechnology{color: black;font-family: sans-serif;animation: blink 1s linear infinite;}
+            @keyframes blink{0%{opacity: 0;}50%{opacity: 1;}100%{opacity: 0;}}
+            #scrollingText{position: fixed;top: 0;left: 0;width: 100vw;height: 30px;background-color: black;color: white;font-size: 16px;padding: 10px;}
+            div p{animation: scroll 10s linear infinite;}
+            @keyframes scroll{0%{transform: translateX(0%);}100%{transform: translateX(-100%);}}
+        </style>
+    </head>
+    <body>
+        <h1>Mathura</h1>
+        <p>Welcome to the holy city of Mathura!</p>
+        <div id="scrollingText"><p>Welcome to the holy city of Mathura!</p></div>
+        <div class="landmarks">
+            <span id="KeshavDevTemple">Keshav Dev Temple</span>
+            <span id="DwarkadhishTemple">Dwarkadhish Temple</span>
+            <span id="PremMandir">Prem Mandir</span>
+            <span id="GoverdhanHill">Goverdhan</span>
+            <span id="VishramGhat">Vishram Ghat</span>
+            <span id="BirlaMandir">Birla Mandir</span>
+            <span id="GitaMandir">Gita Mandir</span>
+            <span id="SatiBurj">Sati Burj</span>
+            <span id="JaiGurudevInstituteOfTechnology">GLA University, Mathura</span>
+        </div>
+    </body>
+</html>

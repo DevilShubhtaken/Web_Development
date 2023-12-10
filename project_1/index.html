@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            addition operation
+        </title>
+        <style>
+            body{
+                background-color: aqua;
+                font-style: italic;
+            }
+            .sst{
+                width: 50%;
+                padding: 10px;
+                font-size: 20px;
+                border-radius: 5px;
+                text-align: left;
+            }
+            .ssc{
+                width: 150px;
+                height: 50px;
+                font-size: 20px;
+                margin: 5px;
+                border-radius: 5px;
+            }
+            .sst:hover{
+                cursor: text;
+            }
+            .ssc:hover{
+                background-color: aquamarine;
+                cursor: pointer
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center"> Addition Page</h1>
+        <center><label for="num1"><b>T1:</b></label>
+    <input class="sst" type="text" id="num1"><br>
+
+    <label for="num2"><b>T2:</b> </label>
+    <input class="sst" type="text" id="num2"><br>
+
+    <button class="ssc" onclick="performAddition()">Add Numbers</button></center>
+
+    <script>
+        function performAddition() 
+        {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+
+            // Check if the input is valid
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("Please enter valid numbers in both text boxes.");
+            } else {
+                // Perform addition
+                var result = num1 + num2;
+                alert("The result of addition is: " + result);
+            }
+        }
+    </script>
+    </body>
+</html>
