@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Information - Page 2</title>
+</head>
+<body>
+    <h2>User Information - Page 2</h2>
+    <form action="page3.php" method="post">
+        <?php
+        // Retrieving data from page 1
+        $name = $_POST['name'] ?? '';
+        $email = $_POST['email'] ?? '';
+        ?>
+        <input type="hidden" name="name" value="<?php echo $name; ?>">
+        <input type="hidden" name="email" value="<?php echo $email; ?>">
+        
+        <label for="age">Age:</label>
+        <input type="number" name="age" required><br><br>
+        
+        <label for="country">Country:</label>
+        <input type="text" name="country" required><br><br>
+        
+        <input type="submit" value="Next">
+    </form>
+</body>
+</html>
